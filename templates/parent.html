@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+        <title>Moja wizytówka</title>
+        
+        {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        {% endblock %}
+
+    </head>
+
+    <body>
+
+        <div class="topnav">
+            <a href="http://localhost:5000/about">About</a>
+            <a href="http://localhost:5000/contact">Contact</a>
+        </div>
+
+        <h1>Witaj na mojej stronie domowej</h1>
+        <img src="{{url_for('static',filename='gag.jpg')}}" alt="9gag image" title="Source: 9gag" width=200px height=200px/>
+        <div id="content">{% block content %}{% endblock %}</div>
+
+    </body>
+
+</html>

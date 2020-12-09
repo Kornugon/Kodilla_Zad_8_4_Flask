@@ -1,24 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "index.html" %}
+{% block content %}
 
-    <body>
-
-        {% extends "parent.html" %}
-        {% block content %}
-            <h2>Kontakt</h2>
-            <ul>
-                {% for item in items %}
-                <li>{{item}}</li>
-                {% endfor %}
-            </ul>
+    <h2>Kontakt</h2>
+    <ul>
+        {% for item in items %}
+        <li>{{item}}</li>
+        {% endfor %}
+    </ul>
 
 
-            <form action="" method="POST">
-                <label>Wpisz wiadomość:</label>
-                <input name="Tekst"/>
-                <input type="submit"/>
-            </form>
-        {% endblock %}
+    <form action="" method="POST">
+        <label>Wpisz wiadomość:</label>
+        <input name="Tekst"/>
+        <input type="submit"/>
+    </form>
 
-    </body>
-</html>
+{% endblock %}
